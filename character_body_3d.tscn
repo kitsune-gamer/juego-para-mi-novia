@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bx0td3t4wid6d"]
+
+[ext_resource type="PackedScene" uid="uid://bvmvxlupqtiby" path="res://knightpr.tscn" id="1_iwpo4"]
+[ext_resource type="Script" uid="uid://2177m8m7ht3m" path="res://character_body_3d.gd" id="1_vd578"]
+[ext_resource type="PackedScene" uid="uid://cwxuql02tuxvg" path="res://control.tscn" id="3_c7tqt"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fb3t6"]
+height = 2.375
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=990375936]
+script = ExtResource("1_vd578")
+
+[node name="knightpr" parent="." unique_id=217622550 instance=ExtResource("1_iwpo4")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=926676776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1875, 0)
+shape = SubResource("CapsuleShape3D_fb3t6")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=260976992]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1, 2, -2)
+fov = 56.95585
+
+[node name="UI" parent="." unique_id=1603926574 instance=ExtResource("3_c7tqt")]

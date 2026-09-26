@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cwxuql02tuxvg"]
+
+[ext_resource type="Script" uid="uid://dswknkaein82g" path="res://control.gd" id="1_0fbet"]
+
+[node name="UI" type="Control" unique_id=1603926574]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0fbet")
+
+[node name="mover" type="VirtualJoystick" parent="." unique_id=12018041]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 433.0
+offset_right = 307.0
+offset_bottom = 595.0
+joystick_size = 205.0
+tip_size = 140.0
+clampzone_ratio = 1.1
+action_left = &"ui_right"
+action_right = &"ui_left"
+action_up = &"ui_down"
+action_down = &"ui_up"
